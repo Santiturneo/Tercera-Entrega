@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Crear datos</h1>
+<form method="post" action="{% url 'create_data' %}">
+  {% csrf_token %}
+  <label for="category_name">Nombre de categoría:</label>
+  <input type="text" name="category_name" required><br>
+  <label for="product_name">Nombre de producto:</label>
+  <input type="text" name="product_name" required><br>
+  <label for="product_price">Precio de producto:</label>
+  <input type="text" name="product_price" required><br>
+  <label for="customer_name">Nombre de cliente:</label>
+  <input type="text" name="customer_name" required><br>
+  <label for="customer_email">Email de cliente:</label>
+  <input type="email" name="customer_email" required><br>
+  <input type="submit" value="Guardar">
+</form>
+
+</body>
+</html>

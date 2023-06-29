@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Resultados de búsqueda</h1>
+<h2>Categorías:</h2>
+<ul>
+  {% for category in categories %}
+    <li>{{ category.name }}</li>
+  {% empty %}
+    <li>No se encontraron categorías.</li>
+  {% endfor %}
+</ul>
+<h2>Productos:</h2>
+<ul>
+  {% for product in products %}
+    <li>{{ product.name }}</li>
+  {% empty %}
+    <li>No se encontraron productos.</li>
+  {% endfor %}
+</ul>
+<h2>Clientes:</h2>
+<ul>
+  {% for customer in customers %}
+    <li>{{ customer.name }}</li>
+  {% empty %}
+    <li>No se encontraron clientes.</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
